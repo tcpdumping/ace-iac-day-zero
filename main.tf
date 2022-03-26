@@ -26,6 +26,7 @@ resource "aviatrix_account" "azure_account" {
 module "aws_transit_1" {
   source              = "terraform-aviatrix-modules/mc-transit/aviatrix"
   version             = "1.1.0"
+  cloud               = "AWS"
   account             = var.aws_account_name
   region              = var.aws_transit1_region
   name                = var.aws_transit1_name
