@@ -16,7 +16,7 @@ EOF
 
 resource "azurerm_network_interface" "main" {
   name                = "${var.azure_spoke2_name}-nic1"
-  resource_group_name = module.azure_spoke_2.vnet.resource_group
+  resource_group_name = module.azure_spoke_2.vpc.resource_group
   location            = var.azure_spoke2_region
   ip_configuration {
     name                          = module.azure_spoke_2.vpc.private_subnets[0].name
